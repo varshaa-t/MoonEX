@@ -27,7 +27,7 @@ function FAQ() {
   return (
     <div className='h-[500px] flex flex-col'>
         <div className='mx-auto text-yellow font-neue-machina-bold text-4xl mb-10'>FAQs</div>
-        <div className='text-white tracking-widest w-[1000px] mx-auto font-raleway'>
+        <div className='text-white tracking-widest w-96 md:w-[600px] lg:w-[1000px] mx-auto font-raleway'>
             <Accordion type="single" collapsible className="w-full">
                 {items.map((item, index) => (
                     <AccordionItem value={`item-${index + 1}`} className="border-gray-700">
