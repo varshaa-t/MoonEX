@@ -1,6 +1,7 @@
 import Hero from "./sections/Hero"
 import About from './sections/About'
 import FAQ from "./sections/FAQ"
+import Footer from "./sections/Footer"
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <Hero/>
     <About/>
     <FAQ/> 
+    <Footer/>
   </div>
   )
 }

@@ -38,8 +38,8 @@ function Hero() {
       />
       <Circle/>
       <MultipleStars styles={"absolute top-40 left-32"}/>
-      <MultipleStars styles={"absolute top-[500px] right-64"}/>
-      <Star styles={"absolute top-32 right-64"}/>
+      <MultipleStars styles={"absolute top-[500px] right-48"}/>
+      <Star styles={"absolute top-32 right-44"}/>
     </div>
   )
 }
