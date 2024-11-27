@@ -53,7 +53,7 @@ function Hero() {
             Trade, earn, and own crypto on the all-in-one multi-chain DEX
           </div>
         </div>
-        <div className='flex space-x-8'>
+        <div className='flex flex-col items-center space-y-6 pr-10 sm:flex-row sm:space-y-0 sm:pr-0 sm:space-x-8'>
           <Button
             text={"Connect Wallet"}
             variant={"yellow"}
