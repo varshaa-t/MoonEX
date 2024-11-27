@@ -87,16 +87,6 @@ function Hero() {
         <MultipleStars styles={"absolute top-64 right-10 md:top-[500px] md:right-48 size-6 md:size-10 lg:size-14"}/>
       </div>
       <Star styles={"absolute top-32 right-44"}/>
-      <div
-        className="absolute top-10 left-10 w-[1200px] h-[600px]"
-        style={{ backgroundImage: `url(${Ellipse1})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
-      >
-      </div>
-      <div
-        className="absolute -top-40 w-[1500px] h-[900px]"
-        style={{ backgroundImage: `url(${Ellipse2})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
-      >
-      </div>
     </div>
   )
 }
