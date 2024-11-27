@@ -129,14 +129,19 @@ function About() {
       </div>
       <table 
         ref={tableRef} 
-        className='border border-gray-700 mb-16 ml-10 sm:ml-16 w-[80vw] table-auto'
+        className='bg-white bg-opacity-[2%] rounded-xl mb-16 ml-10 sm:ml-16 w-[80vw] table-auto'
       >
+        <colgroup>
+          <col className='w-[40%]' />
+          <col className='w-[30%]' />
+          <col className='w-[30%]' />
+        </colgroup>
         <tr>
-          <th className='border border-gray-700 text-base md:text-xl lg:text-3xl font-conthrax text-yellow'>Comparison</th>
-          <th className='border border-gray-700'>
+          <th className='border-b border-gray-700 text-base md:text-xl lg:text-3xl font-conthrax text-yellow px-4 py-6'>Comparison</th>
+          <th className='border-b border-l border-gray-700'>
             <img className='mx-auto' src={logo} alt="moonex-logo"/>
           </th>
-          <th className='border border-gray-700'>
+          <th className='border-b border-l border-gray-700'>
             <img 
               className='w-36 md:w-40 mx-auto py-6'
               src="https://s3-alpha-sig.figma.com/img/3ec2/99e0/fe3d6081f4805f1763b00daf783a87ef?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CC9pxQZn3lx~X8b~PlQws9saDU31ZNNTwsseA3KvBP5zr0FZoroJw-8ytDkk1THamOS0ALgq4lyNKX1t8KutoyMzeCjBdmD264xEqk5j4jYeprq9Rs5mnKAEIbtBi4~RtJWMdqK2iHo8IYt~6nu61~xYPf9MJyE08eIy4nC-fhGhf4NWN2MosgoexZ9PHAW0BKeozpLyAFLKCiRThQC8zCyZ~TKG~RYpP5ig9JYrvyeOBMLXhNqKWaDDKakAVkx-aq-YvROzz3Yt6sqtYzXRmm3EludMhXS8-30NDHTb0DLKDShDU~AOoq6n06MMnvQ3djygwBT1rTEavon9pifAyg__" 
@@ -146,9 +151,9 @@ function About() {
         </tr>
         {comparisons.map((element, index) => (
           <tr key={index}>
-            <td className='border border-gray-700 text-medium-gray font-neue-machina-regular px-10 py-6 text-xl'>{element.title}</td>
+            <td className='border-b border-gray-700 text-medium-gray font-neue-machina-regular px-10 py-6 text-xl'>{element.title}</td>
             <td className='border border-gray-700'><TiTick className='mx-auto text-green-tick text-2xl'/></td>
-            <td className='border border-gray-700'><HiX className='mx-auto text-red-x text-2xl'/></td>
+            <td className='border-b border-gray-700'><HiX className='mx-auto text-red-x text-2xl'/></td>
           </tr>
         ))}
       </table>
