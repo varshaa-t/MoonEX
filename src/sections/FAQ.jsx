@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef} from 'react'
 import {
     Accordion,
     AccordionContent,
@@ -6,29 +6,29 @@ import {
     AccordionTrigger,
   } from "@/components/ui/accordion"
 import LightBlurCircle from '@/components/LightBlurCircle'
-// import gsap from 'gsap'
-// import ScrollTrigger from 'gsap/ScrollTrigger'
-// import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
 
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
   
 function FAQ() {
 
-    // const faqsRef = useRef();
+    const faqsRef = useRef();
 
-    // useGSAP(() => {
-    //     gsap.from(faqsRef.current, {
-    //         opacity: 0,
-    //         duration: 2,
-    //         scrollTrigger: {
-    //             trigger: faqsRef.current,
-    //             scroller: "body",
-    //             markers: false,
-    //             start: "top 80%"
-    //         }
-    //     })
-    // })
+    useGSAP(() => {
+        gsap.from(faqsRef.current, {
+            opacity: 0,
+            duration: 2,
+            scrollTrigger: {
+                trigger: faqsRef.current,
+                scroller: "body",
+                markers: false,
+                start: "top 80%"
+            }
+        })
+    })
 
     const items = [
         {
@@ -47,7 +47,7 @@ function FAQ() {
 
   return (
     <div 
-        // ref={faqsRef} 
+        ref={faqsRef} 
         className='h-[500px] flex flex-col'
     >
         <div className='mx-auto text-yellow font-neue-machina-bold text-4xl mb-10'>FAQs</div>

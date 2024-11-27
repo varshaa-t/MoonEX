@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef} from 'react'
 import logo from '../assets/logo.png'
 import { TiTick } from "react-icons/ti";
 import { HiX } from "react-icons/hi";
@@ -7,74 +7,74 @@ import { SiTicktick } from "react-icons/si";
 import { LuPhoneOff } from "react-icons/lu";
 import FeatureCard from '../components/FeatureCard';
 import BlurCircle from '../components/BlurCircle';
-// import gsap from 'gsap';
-// import { useGSAP } from '@gsap/react';
-// import ScrollTrigger from 'gsap/ScrollTrigger'
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
 
-  // const textRef = useRef();
-  // const tableRef = useRef();
-  // const featuresTitleRef = useRef();
-  // const featuresRef = useRef();
+  const textRef = useRef();
+  const tableRef = useRef();
+  const featuresTitleRef = useRef();
+  const featuresRef = useRef();
 
-  // useGSAP(() => {
-  //   gsap.from(textRef.current, {
-  //     opacity: 0,
-  //     duration: 0.5,
-  //     x: -50,
-  //     scrollTrigger: {
-  //       trigger: textRef.current,
-  //       scroller: "body",
-  //       markers: false,
-  //       start: "top 90%"
-  //     }
-  //   })
-  // })
+  useGSAP(() => {
+    gsap.from(textRef.current, {
+      opacity: 0,
+      duration: 0.5,
+      x: -50,
+      scrollTrigger: {
+        trigger: textRef.current,
+        scroller: "body",
+        markers: false,
+        start: "top 90%"
+      }
+    })
+  })
 
-  // useGSAP(() => {
-  //   gsap.from(tableRef.current, {
-  //     opacity: 0,
-  //     duration: 1,
-  //     x: -50,
-  //     scrollTrigger: {
-  //       trigger: tableRef.current,
-  //       scroller: "body",
-  //       markers: false,
-  //       start: "top 50%"
-  //     }
-  //   })
-  // })
+  useGSAP(() => {
+    gsap.from(tableRef.current, {
+      opacity: 0,
+      duration: 1,
+      x: -50,
+      scrollTrigger: {
+        trigger: tableRef.current,
+        scroller: "body",
+        markers: false,
+        start: "top 50%"
+      }
+    })
+  })
 
-  // useGSAP(() => {
-  //   gsap.from(featuresTitleRef.current, {
-  //     opacity: 0,
-  //     duration: 0.5,
-  //     scrollTrigger: {
-  //       trigger: featuresTitleRef.current,
-  //       scroller: "body",
-  //       markers: false,
-  //       start: "top 80%"
-  //     }
-  //   })
-  // })
+  useGSAP(() => {
+    gsap.from(featuresTitleRef.current, {
+      opacity: 0,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: featuresTitleRef.current,
+        scroller: "body",
+        markers: false,
+        start: "top 80%"
+      }
+    })
+  })
 
-  // useGSAP(() => {
-  //   gsap.from(featuresRef.current.children, {
-  //     opacity: 0,
-  //     duration: 0.5,
-  //     x: 50,
-  //     stagger: 0.25,
-  //     scrollTrigger: {
-  //       trigger: featuresRef.current,
-  //       scroller: "body",
-  //       markers: false,
-  //       start: "top 80%"
-  //     }
-  //   })
-  // })
+  useGSAP(() => {
+    gsap.from(featuresRef.current.children, {
+      opacity: 0,
+      duration: 0.5,
+      x: 50,
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: featuresRef.current,
+        scroller: "body",
+        markers: false,
+        start: "top 80%"
+      }
+    })
+  })
 
   const comparisons = [
     {
@@ -122,13 +122,13 @@ function About() {
   return (
     <div className='pb-44 text-white'>
       <div 
-        // ref={textRef} 
+        ref={textRef} 
         className='font-neue-machina-bold text-4xl sm:text-5xl ml-12 sm:ml-16 mb-10'
       >
         Why <span className='text-yellow'>MoonEX</span>?
       </div>
       <table 
-        // ref={tableRef} 
+        ref={tableRef} 
         className='border border-gray-700 mb-16 ml-10 sm:ml-16 w-[80vw] table-auto'
       >
         <tr>
@@ -154,12 +154,12 @@ function About() {
       </table>
       <div className='flex flex-col'>
         <div 
-          // ref={featuresTitleRef} 
+          ref={featuresTitleRef} 
           className='font-neue-machina-bold mb-10 text-4xl sm:text-5xl ml-[3.5rem] sm:mx-auto'>
             Our <span className='text-yellow'>Features</span>
         </div>
         <div 
-          // ref={featuresRef} 
+          ref={featuresRef} 
           className='grid grid-cols-1 gap-y-10 mx-auto md:grid-cols-2 md:gap-x-20 md:gap-y-10 xl:grid-cols-4 xl:gap-x-20 xl:gap-y-0'
         >
           {features.map((feature, index) => (
