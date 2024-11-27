@@ -64,10 +64,10 @@ function FAQ() {
             </Accordion>
         </div>
         <LightBlurCircle
-            styles={"top-[2100px] -left-28"}
+            styles={"top-[3200px] left-0 md:top-[2100px] w-40 h-40 md:w-96 md:h-96"}
         />
         <LightBlurCircle
-            styles={"top-[1700px] -right-32"}
+            styles={"top-[2800px] right-0 md:top-[1700px] w-40 h-40 md:w-96 md:h-96"}
         />
     </div>
   )

@@ -42,7 +42,7 @@ function Footer() {
                 FAQs
               </NavLink> 
             </li> 
-            <li className='hover:text-yellow hidden md:block'>
+            <li className='hover:text-yellow'>
               <NavLink 
                 to={"/contact-us"}
                 className={({ isActive }) =>
@@ -53,8 +53,8 @@ function Footer() {
               </NavLink> 
             </li> 
         </ul>
-        <div className='flex flex-col text-white space-y-10'>
-            <div className='text-3xl md:text-2xl text-center font-raleway font-bold'>Contact <span className='text-yellow'>Us</span></div>
+        <div className='flex flex-col text-white space-y-0 md:space-y-10'>
+            <div className='text-3xl md:text-2xl text-center font-raleway font-bold hidden md:block'>Contact <span className='text-yellow'>Us</span></div>
             <div className='flex justify-between text-3xl space-x-8'>
                 <SiMinutemailer className='text-dark-blue text-4xl bg-white md:text-3xl rounded-full px-1 py-1'/>
                 <FaDiscord className='text-4xl md:text-3xl' />

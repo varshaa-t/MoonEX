@@ -174,7 +174,7 @@ function About() {
         </div>
       </div>
       <BlurCircle
-        styles={"left-1/3 top-[900px] lg:left-4/6"}
+        styles={"left-10 top-[1000px] md:left-1/3 md:top-[900px] lg:left-4/6 w-60 h-60 md:w-96 md:h-96"}
       />
     </div>
   )
