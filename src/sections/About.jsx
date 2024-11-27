@@ -120,11 +120,11 @@ function About() {
   ]
 
   return (
-    <div className='ml-12 sm:ml-16 pt-60 sm:pt-0 pb-44 text-white'>
-      <div ref={textRef} className='font-neue-machina-bold text-5xl ml-2 sm:ml-0 mb-10'>
+    <div className='pb-44 text-white'>
+      <div ref={textRef} className='font-neue-machina-bold text-4xl sm:text-5xl ml-12 sm:ml-16 mb-10'>
         Why <span className='text-yellow'>MoonEX</span>?
       </div>
-      <table ref={tableRef} className='border border-gray-700 mb-16 w-[80vw] table-auto'>
+      <table ref={tableRef} className='border border-gray-700 mb-16 ml-10 sm:ml-16 w-[80vw] table-auto'>
         <tr>
           <th className='border border-gray-700 text-base md:text-xl lg:text-3xl font-conthrax text-yellow'>Comparison</th>
           <th className='border border-gray-700'>
@@ -147,8 +147,8 @@ function About() {
         ))}
       </table>
       <div className='flex flex-col'>
-        <div ref={featuresTitleRef} className='font-neue-machina-bold mb-10 text-5xl ml-8 sm:mx-auto'>Our <span className='text-yellow'>Features</span></div>
-        <div ref={featuresRef} className='grid grid-cols-1 gap-y-10 ml-10 sm:mx-auto md:grid-cols-2 md:gap-x-20 md:gap-y-10 xl:grid-cols-4 xl:mx-0 xl:gap-x-0 xl:gap-y-0'>
+        <div ref={featuresTitleRef} className='font-neue-machina-bold mb-10 text-4xl sm:text-5xl ml-[3.5rem] sm:mx-auto'>Our <span className='text-yellow'>Features</span></div>
+        <div ref={featuresRef} className='grid grid-cols-1 gap-y-10 mx-auto md:grid-cols-2 md:gap-x-20 md:gap-y-10 xl:grid-cols-4 xl:gap-x-20 xl:gap-y-0'>
           {features.map((feature, index) => (
             <div key={index}>
               <FeatureCard
