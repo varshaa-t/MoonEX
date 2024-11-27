@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {
     Accordion,
     AccordionContent,
@@ -6,9 +6,30 @@ import {
     AccordionTrigger,
   } from "@/components/ui/accordion"
 import LightBlurCircle from '@/components/LightBlurCircle'
-  
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
 
+
+gsap.registerPlugin(ScrollTrigger);
+  
 function FAQ() {
+
+    const faqsRef = useRef();
+
+    useGSAP(() => {
+        gsap.from(faqsRef.current, {
+            opacity: 0,
+            duration: 2,
+            scrollTrigger: {
+                trigger: faqsRef.current,
+                scroller: "body",
+                markers: false,
+                start: "top 80%"
+            }
+        })
+    })
+
     const items = [
         {
             question: "How do I get a Referral Code?",
@@ -25,7 +46,7 @@ function FAQ() {
     ]
 
   return (
-    <div className='h-[500px] flex flex-col'>
+    <div ref={faqsRef} className='h-[500px] flex flex-col'>
         <div className='mx-auto text-yellow font-neue-machina-bold text-4xl mb-10'>FAQs</div>
         <div className='text-white tracking-widest w-96 md:w-[600px] lg:w-[1000px] mx-auto font-raleway'>
             <Accordion type="single" collapsible className="w-full">
