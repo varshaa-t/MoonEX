@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import {
     Accordion,
     AccordionContent,
@@ -6,29 +6,29 @@ import {
     AccordionTrigger,
   } from "@/components/ui/accordion"
 import LightBlurCircle from '@/components/LightBlurCircle'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useGSAP } from '@gsap/react'
+// import gsap from 'gsap'
+// import ScrollTrigger from 'gsap/ScrollTrigger'
+// import { useGSAP } from '@gsap/react'
 
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
   
 function FAQ() {
 
-    const faqsRef = useRef();
+    // const faqsRef = useRef();
 
-    useGSAP(() => {
-        gsap.from(faqsRef.current, {
-            opacity: 0,
-            duration: 2,
-            scrollTrigger: {
-                trigger: faqsRef.current,
-                scroller: "body",
-                markers: false,
-                start: "top 80%"
-            }
-        })
-    })
+    // useGSAP(() => {
+    //     gsap.from(faqsRef.current, {
+    //         opacity: 0,
+    //         duration: 2,
+    //         scrollTrigger: {
+    //             trigger: faqsRef.current,
+    //             scroller: "body",
+    //             markers: false,
+    //             start: "top 80%"
+    //         }
+    //     })
+    // })
 
     const items = [
         {
@@ -46,12 +46,15 @@ function FAQ() {
     ]
 
   return (
-    <div ref={faqsRef} className='h-[500px] flex flex-col'>
+    <div 
+        // ref={faqsRef} 
+        className='h-[500px] flex flex-col'
+    >
         <div className='mx-auto text-yellow font-neue-machina-bold text-4xl mb-10'>FAQs</div>
-        <div className='text-white tracking-widest w-96 md:w-[600px] lg:w-[1000px] mx-auto font-raleway'>
+        <div className='text-white tracking-widest w-2/3 md:w-[600px] lg:w-[1000px] mx-auto font-raleway'>
             <Accordion type="single" collapsible className="w-full">
                 {items.map((item, index) => (
-                    <AccordionItem value={`item-${index + 1}`} className="border-gray-700">
+                    <AccordionItem key={index} value={`item-${index + 1}`} className="border-gray-700">
                         <AccordionTrigger className="text-lg font-medium">{item.question}</AccordionTrigger>
                         <AccordionContent className="text-base font-normal text-medium-gray">
                             {item.answer}

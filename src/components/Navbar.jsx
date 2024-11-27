@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import Button from './Button'
 import logo from '../assets/logo.png'
 import { NavLink } from 'react-router-dom'
 import { RxHamburgerMenu } from "react-icons/rx";
-import gsap from 'gsap';
+// import gsap from 'gsap';
 import {
   Sheet,
   SheetContent,
@@ -12,24 +12,27 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { useGSAP } from '@gsap/react';
+// import { useGSAP } from '@gsap/react';
 
 function Navbar() {
 
-  const navRef = useRef(null);
+  // const navRef = useRef(null);
 
-  useGSAP(() => {
-    gsap.from(navRef.current, {
-      opacity: 0,
-      duration: 0.8,
-      delay: 0.7,
-      y: 50
-    })
-  })
+  // useGSAP(() => {
+  //   gsap.from(navRef.current, {
+  //     opacity: 0,
+  //     duration: 0.8,
+  //     delay: 0.7,
+  //     y: 50
+  //   })
+  // })
 
   return (
       <nav className='backdrop-blur-xl sticky top-0 z-50'>
-        <div ref={navRef} className='xl:flex hidden justify-between items-center px-10 py-6 text-white'>
+        <div 
+          // ref={navRef} 
+          className='xl:flex hidden justify-between items-center px-10 py-6 text-white'
+        >
           <NavLink to="/">
             <div>
               <img className='w-44' src={logo} alt="logo" />
@@ -97,7 +100,7 @@ function Navbar() {
             <NavLink to="/"><img className='w-44' src={logo} alt="logo" /></NavLink>
           </div>
           <Sheet>
-            <SheetTrigger>
+            <SheetTrigger onClick={() => console.log("Trigger clicked")}>
               <RxHamburgerMenu className='text-3xl text-yellow'/>
             </SheetTrigger>
             <SheetContent className="bg-gray-900 text-yellow border-gray-800">
