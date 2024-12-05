@@ -129,7 +129,7 @@ function About() {
       </div>
       <table 
         ref={tableRef} 
-        className='bg-white bg-opacity-[2%] rounded-xl mb-16 ml-10 sm:ml-16 w-[80vw] table-auto'
+        className='bg-white bg-opacity-[2%] rounded-xl mb-16 ml-10 sm:ml-16 w-[80vw] md:w-[85vw] lg:w-[90vw]'
       >
         <colgroup>
           <col className='w-[40%]' />
@@ -151,11 +151,16 @@ function About() {
         </tr>
         {comparisons.map((element, index) => (
           <tr key={index}>
-            <td className='border-b border-gray-700 text-medium-gray font-neue-machina-regular px-10 py-6 text-xl'>{element.title}</td>
+            <td className='border-b border-gray-700 text-medium-gray font-neue-machina-regular px-10 py-6 sm:text-xl'>{element.title}</td>
             <td className='border border-gray-700'><TiTick className='mx-auto text-green-tick text-2xl'/></td>
             <td className='border-b border-gray-700'><HiX className='mx-auto text-red-x text-2xl'/></td>
           </tr>
         ))}
+        <tr>
+            <td className='border-l-0 border-b-0 border-gray-700 px-10 py-6'></td>
+            <td className='border-x-[1px] border-gray-700'></td>
+            <td className='border-l-0 border-b-0 border-gray-700'></td>
+        </tr>
       </table>
       <div className='flex flex-col'>
         <div 

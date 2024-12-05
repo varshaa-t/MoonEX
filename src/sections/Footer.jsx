@@ -7,7 +7,7 @@ import { FaDiscord } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className='flex flex-col pb-10 xl:pb-0 xl:flex-row justify-between items-center xl:h-80 px-16 bg-dark-blue text-white'>
+    <div className='flex flex-col pb-10 xl:pb-0 xl:flex-row justify-between items-center xl:h-80 px-16 bg-dark-blue text-white relative z-10'>
         <div>
             <img className='w-40 h-40' src={logoTextDown} alt="logo" />
         </div>
