@@ -95,7 +95,7 @@ function Navbar() {
             text={"Connect Wallet"}
           />
         </div>
-        <div className='xl:hidden flex justify-between items-center px-10 py-6 text-white'>
+        <div className='xl:hidden flex justify-between items-center px-2 sm:px-4 md:px-6 lg:px-10 py-6 text-white'>
           <div>
             <NavLink to="/"><img className='w-44' src={logo} alt="logo" /></NavLink>
           </div>
